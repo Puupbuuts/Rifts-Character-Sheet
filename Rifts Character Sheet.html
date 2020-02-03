@@ -187,6 +187,11 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><input class="attribute" type="number" value="" name="attr_character_isp_max" title="@{character_isp_max}" /></td>
                             </tr>
                             <tr>
+                                <td><h5>Chi</h5></td>
+                                <td><input class="attribute" type="number" value="" name="attr_character_chi" title="@{character_chi}" /></td>
+                                <td><input class="attribute" type="number" value="" name="attr_character_chi_max" title="@{character_chi_max}" /></td>
+                            </tr>
+                            <tr>
                                 <td><h5>A.R.</h5></td>
                                 <td><input class="attribute" type="number" value="" name="attr_character_ar" title="@{character_ar}" /></td>
                             </tr>
@@ -194,7 +199,7 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><h5>H.F.</h5></td>
                                 <td><input class="attribute" type="number" value="" name="attr_character_hf" title="@{character_hf}" /></td>
                             </tr>
-                                                        <tr>
+                            <tr>
                                 <td><h5>Perception</h5></td>
                                 <td><input type="number" value"0" name="attr_perception" title="@{perception}" /></td>
                                 <td><button type="roll" value="&{template:default} {{@{character_name}'s Perception=[[1d20+@{perception}]]}}" /></td>
@@ -203,7 +208,7 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><h5>Psionics</h5></td>
                             </tr>
                             <tr>
-                                <td><select class="sheet-select" name="attr_character_psychic" title="@{chatacter_psychic" value="None" style="width:120px">
+                                <td><select class="sheet-select" name="attr_character_psychic" title="@{chatacter_psychic}" value="None" style="width:120px">
                                     <option value="None">None</option>
                                     <option value="Minor">Minor</option>
                                     <option value="Major">Major</option>
@@ -230,11 +235,11 @@ Palladium Megaverse© Character Sheet <br>
                 </tr>
                 <tr>
                     <td><h5>Run</h5></td>
-                    <td><input class="attribute" type="number" value="round(@{spd}*0.68)" disabled="true" name="attr_run_mph" title="@{run_mph}" /></td>
-                    <td><input class="attribute" type="number" value="round(@{spd}*15)" disabled="true" name="attr_run_ft_melee" title="@{run_ft_melee}" /></td>
-                    <td><input class="attribute" type="number" value="round(@{spd}*15/@{hth_numberattacks})" disabled="true" name="attr_run_ft_attack" title="@{run_ft_attack}" /></td>
-                    <td><input class="attribute" type="number" value="" name="attr_run_cruising" title="@{run_ft_cruising}" /></td>
-                    <td><input class="attribute" type="number" value="@{pe}/2" disabled="true" name="attr_run_at_max" title="@{run_at_max}" />minutes</td>
+                    <td><input class="attribute" type="number" value="round(@{spd}*0.68)" disabled="true" name="attr_run_mph" title="@{run_mph}" style="width:60px" /></td>
+                    <td><input class="attribute" type="number" value="round(@{spd}*15)" disabled="true" name="attr_run_ft_melee" title="@{run_ft_melee}" style="width:60px" /></td>
+                    <td><input class="attribute" type="number" value="round(@{spd}*15/@{hth_numberattacks})" disabled="true" name="attr_run_ft_attack" title="@{run_ft_attack}" style="width:60px" /></td>
+                    <td><input class="attribute" type="number" value="" name="attr_run_cruising" title="@{run_ft_cruising}" style="width:60px" /></td>
+                    <td><input class="attribute" type="number" value="@{pe}/2" disabled="true" name="attr_run_at_max" title="@{run_at_max}" style="width:60px" />minutes</td>
                 </tr>
             </table>
             <table>
@@ -258,11 +263,11 @@ Palladium Megaverse© Character Sheet <br>
                     </tr>
                     <tr>
                         <td><h5><input class="attribute" type="text" value="" name="attr_movement_name" title="@{movement_name}" style="width:200px" placeholder="Additional Movement Type" /></h5></td>
-                        <td><input class="attribute" type="number" value="" name="attr_movement_mph" title="@{movement_mph}" /></td>
-                        <td><input class="attribute" type="number" value="" name="attr_movement_ft_melee" title="@{movement_ft_melee}" /></td>
-                        <td><input class="attribute" type="number" value="" name="attr_movement_ft_attack" title="@{movement_ft_attack}" /></td>
-                        <td><input class="attribute" type="number" value="" name="attr_movement_cruising" title="@{movement_ft_cruising}" /></td>
-                        <td><input class="attribute" type="number" value="" name="attr_movement_at_max" title="@{movement_at_max}" />minutes</td>
+                        <td><input class="attribute" type="number" value="" name="attr_movement_mph" title="@{movement_mph}" style="width:60px" /></td>
+                        <td><input class="attribute" type="number" value="" name="attr_movement_ft_melee" title="@{movement_ft_melee}" style="width:60px" /></td>
+                        <td><input class="attribute" type="number" value="" name="attr_movement_ft_attack" title="@{movement_ft_attack}" style="width:60px" /></td>
+                        <td><input class="attribute" type="number" value="" name="attr_movement_cruising" title="@{movement_ft_cruising}" style="width:60px" /></td>
+                        <td><input class="attribute" type="number" value="" name="attr_movement_at_max" title="@{movement_at_max}" style="width:60px" />minutes</td>
                     </tr>
                 </table>
             </fieldset>    
@@ -781,7 +786,7 @@ Palladium Megaverse© Character Sheet <br>
             <fieldset class="repeating_skillocc">
                 <table>
                     <tr>
-                        <td><div class="sheet-ability"><button name="attr_skill_check" title="@{skill_check}" type="roll" value="&{template:default} {{name=@{character_name}'s @{skill_name} check}} {{Check=[[1d100<(@{skill_rating}+?{Situational Bonus|0})]]}} {{1 is a Success=0 is a Failure}}"></button></div></td>
+                        <td><div class="sheet-ability"><button name="attr_skill_check" title="@{skill_check}" type="roll" value="&{template:default} {{name=@{character_name}'s @{skill_name} check}} {{Check [[1d100]]=Rating [[@{skill_rating}+?{Situational Bonus|0}]] }}"></button></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="text" style="width:220px" value="" name="attr_skill_name" title="@{skill_name}" placeholder="Skill name"/></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="number" style="width:60px" value="" name="attr_skill_rating" title="@{skill_rating}" /><b>%</b></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="number" style="width:40px" value="" name="attr_skill_level" title="@{skill_level}" /><b>%</b></div></td>
@@ -810,7 +815,7 @@ Palladium Megaverse© Character Sheet <br>
             <fieldset class="repeating_skillrelated">
                 <table>
                     <tr>
-                        <td><div class="sheet-ability"><button name="attr_skill_check" title="@{skill_check}" type="roll" value="&{template:default} {{name=@{character_name}'s @{skill_name} check}} {{Check=[[1d100<(@{skill_rating}+?{Situational Bonus|0})]]}} {{1 is a Success=0 is a Failure}}"></button></div></td>
+                        <td><div class="sheet-ability"><button name="attr_skill_check" title="@{skill_check}" type="roll" value="&{template:default} {{name=@{character_name}'s @{skill_name} check}} {{Check [[1d100]]=Rating [[@{skill_rating}+?{Situational Bonus|0}]] }}"></button></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="text" style="width:220px" value="" name="attr_skill_name" title="@{skill_name}" placeholder="Skill name"/></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="number" style="width:60px" value="" name="attr_skill_rating" title="@{skill_rating}" /><b>%</b></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="number" style="width:40px" value="" name="attr_skill_level" title="@{skill_level}"  /><b>%</b></div></td>
@@ -839,7 +844,7 @@ Palladium Megaverse© Character Sheet <br>
             <fieldset class="repeating_skillsecondary">
                 <table>
                     <tr>
-                        <td><div class="sheet-ability"><button name="attr_skill_check" title="@{skill_check}" type="roll" value="&{template:default} {{name=@{character_name}'s @{skill_name} check}} {{Check=[[d100<(@{skill_rating}+?{Situational Bonus|0})]]}} {{1 is a Success=0 is a Failure}}"></button></div></td>
+                        <td><div class="sheet-ability"><button name="attr_skill_check" title="@{skill_check}" type="roll" value="&{template:default} {{name=@{character_name}'s @{skill_name} check}} {{Check [[1d100]]=Rating [[@{skill_rating}+?{Situational Bonus|0}]] }}"></button></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="text" style="width:220px" value="" name="attr_skill_name" title="@{skill_name)" placeholder="Skill name"/></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="number" style="width:60px" value="" name="attr_skill_rating" title="@{skill_rating}" /><b>%</b></div></td>
                         <td><div class="sheet-ability"><input class="sheet-input-center-aligned" type="number" style="width:40px" value="" name="attr_skill_level" title="@{skill_level}" /><b>%</b></div></td>
@@ -1018,23 +1023,19 @@ Palladium Megaverse© Character Sheet <br>
                 <table style="width:85%">
                     <tr>
                         <td><select class ="sheet-select" type="text" name="attr_combatskill" title="@{combatskill}" value="non_combatant" style="margin-bottom:0" >
-                                <option value="non_combatant">Non-Combatant</option>
-                                <option value="basic">Hand to Hand: Basic</option>
-                                <option value="expert">Hand to Hand: Expert</option>
-                                <option value="martial">Hand to Hand: Martial Arts</option>
-                                <option value="assassin">Hand to Hand: Assassin</option>
-                                <option value="commando">Hand to Hand: Commando</option>
-                                <option value="zen">Hand to Hand: Zen</option>
-                            </select></td>
+                            <option value="non_combatant">Non-Combatant</option>
+                            <option value="basic">Hand to Hand: Basic</option>
+                            <option value="expert">Hand to Hand: Expert</option>
+                            <option value="martial">Hand to Hand: Martial Arts</option>
+                            <option value="assassin">Hand to Hand: Assassin</option>
+                            <option value="commando">Hand to Hand: Commando</option>
+                            <option value="zen">Hand to Hand: Zen</option>
+                        </select></td>
                     </tr>
                 </table>
                 <div class="sheet-2colrow">
                     <div class="sheet-col">
                         <table>
-                            <tr>
-                                <td><h5>Number of Attacks</h5></td>
-                                <td><input type="number" name="attr_hth_numberattacks" title="@{hth_numberattacks}" value="1" /></td>
-                            </tr>
                             <tr>
                                 <td><h5>Initiative</h5></td>
                                 <td><input type="number" value="0" name="attr_initiative" title="@{initiative}" /></td>
@@ -1045,10 +1046,7 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><input type="number" name="attr_hth_strike" title="@{hth_strike}" value="0" /></td>
                                 <td><button type="roll" name="attr_hth_strike_roll" title="@{hth_strike_roll}"  value="&{template:default} {{name=@{character_name}'s HtH Strike}} {{Strike=[[1d20cs>@{critical}+@{hth_strike}+?{Situational Bonus|0}]]}}"></button></td>
                             </tr>
-                            <tr>
-                                <td><h5>Damage</h5></td>
-                                <td><input type="number" name="attr_hth_damage" title="@{hth_damage}" title="@{hth_damage}" value="0" /></td>
-                            </tr>
+                            
                             <tr>
                                 <td><h5>Parry</h5></td>
                                 <td><input type="number" name="attr_hth_parry" title="@{hth_parry}" value="0" /></td>
@@ -1058,27 +1056,34 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><h5>Dodge</h5></td>
                                 <td><input type="number" name="attr_hth_dodge" title="@{hth_dodge}" value="0" /></td>
                                 <td><button type="roll" name="attr_hth_dodge_roll" title="@{hth_dodge_roll}" value="&{template:default} {{name=@{character_name}'s Dodge}} {{Dodge=[[1d20cs>20+@{hth_dodge}+?{Situational Bonus|0}]]}}"></button></td>
-                                <td><input type="checkbox" name="attr_autododge_toggle" title="@{autododge_toggle}" /><b>Auto Dodge</b></td>
                             </tr>
                             <tr>
-                                <td><h5>Roll w Punch/Impact</h5></td>
-                                <td><input type="number" name="attr_hth_roll" title="@{hth_roll}" value="0" /></td>
-                                <td><button type="roll" name="attr_hth_roll_roll" title="@{hth_roll_roll}" value="&{template:default} {{name=@{character_name}'s Roll with Punch/Impact}} {{Roll=[[1d20cs>20+@{hth_roll}+?{Situational Bonus|0}]]}}"></button></td>
-                            </tr>
-                            <tr>
-                                <td><h5>Pull Punch</h5></td>
-                                <td><input type="number" name="attr_hth_pullpunch" title="@{hth_pullpunch}" value="0" /></td>
-                                <td><button type="roll" name="attr_hth_pullpunch_roll" title="@{hth_pullpunch_roll}" value="&{template:default} {{name=@{character_name}'s Pull Punch}} {{Pull Punch=[[1d20cs>20+@{hth_pullpunch}+?{Situational Bonus|0}]]}}"></button></td>
-                            </tr>
-                            <tr>
-                                <td><h5>Disarm</h5></td>
-                                <td><input type="number" name="attr_hth_disarm" title="@{hth_disarm}" value="0" /></td>
-                                <td><button type="roll" name="attr_hth_disarm_roll" title="@{hth_disarm_roll}" value="&{template:default} {{name=@{character_name}'s disarm}} {{Disarm=[[1d20cs>20+@{hth_disarm}+?{Situational Bonus|0}]]}}"></button></td>
+                                <td><h5>Automatic Dodge</h5></td>
+                                <td><input type="number" name="attr_hth_autododge" title="@{hth_autododge}" value="0" /></td>
+                                <td><button type="roll" name="attr_hth_autododge_roll" title="@{hth_autododge_roll}" value="&{template:default} {{name=@{character_name}'s Automatic Dodge}} {{Dodge=[[1d20cs>20+@{hth_autododge}+?{Situational Bonus|0}]]}}"></button></td>
+                                <td><input type="checkbox" name="attr_autododge_toggle" title="@{autododge_toggle}" /></td>
                             </tr>
                             <tr>
                                 <td><h5>Entangle</h5></td>
                                 <td><input type="number" name="attr_hth_entangle" title="@{hth_entangle}" value="0" /></td>
                                 <td><button type="roll" name="attr_hth_entangle_roll" title="@{hth_entangle_roll}" value="&{template:default} {{name=@{character_name}'s Entangle}} {{Entangle=[[1d20cs>20+@{hth_entangle}+?{Situational Bonus|0}]]}}"></button></td>
+                            </tr>    
+                            <tr>
+                                <td><h5>Roll w Punch, Fall, or Impact</h5></td>
+                                <td><input type="number" name="attr_hth_roll" title="@{hth_roll}" value="0" /></td>
+                                <td><button type="roll" name="attr_hth_roll_roll" title="@{hth_roll_roll}" value="&{template:default} {{name=@{character_name}'s Roll with Punch, Fall, or Impact}} {{Roll=[[1d20cs>20+@{hth_roll}+?{Situational Bonus|0}]]}}"></button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sheet-col">
+                        <table>
+                            <tr>
+                                <td><h5>Number of Attacks</h5></td>
+                                <td><input type="number" name="attr_hth_numberattacks" title="@{hth_numberattacks}" value="1" /></td>
+                            </tr>
+                            <tr>
+                                <td><h5>Damage</h5></td>
+                                <td><input type="number" name="attr_hth_damage" title="@{hth_damage}" title="@{hth_damage}" value="0" /></td>
                             </tr>
                             <tr>
                                 <td><h5>Knockout/Stun</h5></td>
@@ -1092,175 +1097,180 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><h5>Death Blow</h5></td>
                                 <td><input type="number" name="attr_hth_death" title="@{hth_death}" value="0" /></td>
                             </tr>
+                            <tr>
+                                <td><h5>Disarm</h5></td>
+                                <td><input type="number" name="attr_hth_disarm" title="@{hth_disarm}" value="0" /></td>
+                                <td><button type="roll" name="attr_hth_disarm_roll" title="@{hth_disarm_roll}" value="&{template:default} {{name=@{character_name}'s disarm}} {{Disarm=[[1d20cs>20+@{hth_disarm}+?{Situational Bonus|0}]]}}"></button></td>
+                            </tr>
+                            <tr>
+                                <td><h5>Pull Punch</h5></td>
+                                <td><input type="number" name="attr_hth_pullpunch" title="@{hth_pullpunch}" value="0" /></td>
+                                <td><button type="roll" name="attr_hth_pullpunch_roll" title="@{hth_pullpunch_roll}" value="&{template:default} {{name=@{character_name}'s Pull Punch}} {{Pull Punch=[[1d20cs>20+@{hth_pullpunch}+?{Situational Bonus|0}]]}}"></button></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
-                <div class="sheet-tabbed-panel">
-                    <div class="sheet-row-panel">
-                        <input type="checkbox" class="sheet-arrow" name="attr_basiccombat-toggle"  />
-                        <h4>Basic Combat Maneuvers </h4>
-                        <div class="body">
-                            <div class="sheet-2colrow">
-                                <div class="sheet-col">
-                                    <table>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_bodyblock" /></td>
-                                            <td><h5>Body Block/Tackle</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} performs a Body Block/Tackle}} {{Damage=[[1d4+@{hth_damage}]] plus knockdown}}" ></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="attr_checkbox_bodyflip" /></td>
-                                            <td><h5>Body Flip/Throw</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} performs a Body Flip/Throw}} {{Damage=[[1d6+@{hth_damage}]] and victim loses initiative and one attack}}" ></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="attr_checkbox_elbow" /></td>
-                                            <td><h5>Elbow/Forearm</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with an Elbow/Forearm}} {{Damage=[[1d6+@{hth_damage}]]}}" ></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_kick" /></td>
-                                            <td><h5>Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Kick}} {{Damage=[[1d8+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="sheet-col">
-                                    <table>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_knee" /></td>
-                                            <td><h5>Knee</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Knee}} {{Damage=[[1d6+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_punch" /></td>
-                                            <td><h5>Punch</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Punch}} {{[[1d4+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_powerpunch" /></td>
-                                            <td><h5>Power Punch</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Power Punch}} {{[[(1d4+@{hth_damage})*2]]}}"></button></td>
-                                            <td>(Costs 2 attacks)</td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_powerkick" /></td>
-                                            <td><h5>Power Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Power Kick}} {{[[(1d4+@{hth_damage})*2]]}}"></button></td>
-                                            <td>(Costs 2 attacks)</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
+                <h4>Combat Maneuvers (all Power Attacks, as well as Body Block/Tackle and Leap Kick, require 2 melee attacks)</h4>
+                    <div class="sheet-2colrow">
+                        <div class="sheet-col">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Hand Strikes</h5></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><h5>Power Attack</h5></td>
+                                </tr>    
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_punch" /></td>
+                                    <td><h5>Punch</h5></td>
+                                    <td><input type="text" value="1d4" name="attr_punch" title="@{punch}" style="width:80px" placeholder="1d4" /></td>
+                                    <td><button type="roll" name="attr_punch_roll" title="@{punch_roll}" value="&{template:default} {{name=@{character_name} strikes with a Punch}} {{Damage=[[@{punch}+@{hth_damage}]]}}"></button></td>
+                                    <td><button type="roll" name="attr_powerpunch_roll" title="@{powerpunch_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Punch}} {{Damage=[[(@{punch}+@{hth_damage})*2]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="attr_checkbox_Backhand" /></td>
+                                    <td><h5>Backhand</h5></td>
+                                    <td><input type="text" value="1d6" name="attr_backhand" title="@{backhand}" style="width:80px" placeholder="1d6" /></td>
+                                    <td><button type="roll" name="attr_backhand_roll" title="@{backhand_roll}" value="&{template:default} {{name=@{character_name} strikes with a Backhand}} {{Damage=[[@{backhand}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_powerbackhand_roll" title="@{powerbackhand_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Backhand}} {{Damage=[[(@{backhand}+@{hth_damage})*2]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="attr_checkbox_elbow" /></td>
+                                    <td><h5>Elbow/Forearm</h5></td>
+                                    <td><input type="text" value="1d6" name="attr_elbow" title="@{elbow}" style="width:80px" placeholder="1d6" /></td>
+                                    <td><button type="roll" name="attr_elbow_roll" title="@{elbow_roll}" value="&{template:default} {{name=@{character_name} strikes with an Elbow/Forearm}} {{Damage=[[@{elbow}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_powerelbow_roll" title="@{powerelbow_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Elbow}} {{Damage=[[(@{elbow}+@{hth_damage})*2]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="attr_checkbox_bodyflip" /></td>
+                                    <td><h5>Body Flip/Throw</h5></td>
+                                    <td><input type="text" value="1d6" name="attr_bodyflip" title="@{bodyflip}" style="width:80px" placeholder="1d6" /></td>
+                                    <td><button type="roll" name="attr_bodyflip_roll" title="@{bodyflip_roll}" value="&{template:default} {{name=@{character_name} performs a Body Flip/Throw}} {{Damage=[[@{bodyflip}+@{hth_damage}]], victim loses one melee action and initiative. The victim can attempt to roll with impact to reduce the damage by half (if succesful)}}" ></button></td>
+                                    <td><button type="roll" name="attr_powerbodyflip_roll" title="@{powerbodyflip_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Body Flip/Throw}} {{Damage=[[(@{bodyflip}+@{hth_damage})*2]], victim loses one melee action and initiative. The victim can attempt to roll with impact to reduce the damage by half (if succesful)}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Other Attacks</h5></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><h5>Power Attack</h5></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_bodyblock" /></td>
+                                    <td><h5>Body Block/Tackle</h5></td>
+                                    <td><input type="text" value="1d4" name="attr_bodyblock" title="@{bodyblock}" style="width:80px" placeholder="1d4" /></td>
+                                    <td><button type="roll" name="attr_bodyblock_roll" title="@{bodyblock_roll}" value="&{template:default} {{name=@{character_name} performs a Body Block/Tackle}} {{Damage=[[@{bodyblock}+@{hth_damage}]], victim loses one melee action and has a [[50+({@{ps}-20,0}kh1)]]% chance of being knocked down losing initiative}}" ></button></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_otherattack_0" /></td>
+                                    <td><input type="text" name="attr_otherattack_name_0" title="@{otherattack_name_0}" style="width:120px" placeholder="Attack type/name" /></td>
+                                    <td><input type="text" name="attr_otherattack_damage_0" title="@{otherattack_damage_0}" style="width:80px" /></td>
+                                    <td><button type="roll" name="attr_otherattack_0_roll" title="@{otherattack_0_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_0}}} {{Damage=[[@{otherattack_damage_0}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_otherpowerattack_0_roll" title="@{otherpowerattack_0_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_0}}} {{Damage=[[(@{otherattack_damage_0}+@{hth_damage})*2]]}}" ></button></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_otherattack_1" /></td>
+                                    <td><input type="text" name="attr_otherattack_name_1" title="@{otherattack_name_1}" style="width:120px" placeholder="Attack type/name" /></td>
+                                    <td><input type="text" name="attr_otherattack_damage_1" title="@{otherattack_damage_1}" style="width:80px" /></td>
+                                    <td><button type="roll" name="attr_otherattack_1_roll" title="@{otherattack_1_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_1}}} {{Damage=[[@{otherattack_damage_1}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_otherpowerattack_1_roll" title="@{otherpowerattack_1_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_1}}} {{Damage=[[(@{otherattack_damage_1}+@{hth_damage})*2]]}}" ></button></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_otherattack_2" /></td>
+                                    <td><input type="text" name="attr_otherattack_name_2" title="@{otherattack_name_2}" style="width:120px" placeholder="Attack type/name" /></td>
+                                    <td><input type="text" name="attr_otherattack_damage_2" title="@{otherattack_damage_2}" style="width:80px" /></td>
+                                    <td><button type="roll" name="attr_otherattack_2_roll" title="@{otherattack_2_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_2}}} {{Damage=[[@{otherattack_damage_2}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_otherpowerattack_2_roll" title="@{otherpowerattack_2_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_2}}} {{Damage=[[(@{otherattack_damage_2}+@{hth_damage})*2]]}}" ></button></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_otherattack_3" /></td>
+                                    <td><input type="text" name="attr_otherattack_name_3" title="@{otherattack_name_3}" style="width:120px" placeholder="Attack type/name" /></td>
+                                    <td><input type="text" name="attr_otherattack_damage_3" title="@{otherattack_damage_3}" style="width:80px" /></td>
+                                    <td><button type="roll" name="attr_otherattack_3_roll" title="@{otherattack_3_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_3}}} {{Damage=[[@{otherattack_damage_3}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_otherpowerattack_3_roll" title="@{otherpowerattack_3_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_3}}} {{Damage=[[(@{otherattack_damage_3}+@{hth_damage})*2]]}}" ></button></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_otherattack-4" /></td>
+                                    <td><input type="text" name="attr_otherattack_name_4" title="@{otherattack_name_4}" style="width:120px" placeholder="Attack type/name" /></td>
+                                    <td><input type="text" name="attr_otherattack_damage_4" title="@{otherattack_damage_4}" style="width:80px" /></td>
+                                    <td><button type="roll" name="attr_otherattack_4_roll" title="@{otherattack_4_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_4}}} {{Damage=[[@{otherattack_damage_4}+@{hth_damage}]]}}" ></button></td>
+                                    <td><button type="roll" name="attr_otherpowerattack_4_roll" title="@{otherpowerattack_4_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_4}}} {{Damage=[[(@{otherattack_damage_4}+@{hth_damage})*2]]}}" ></button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="sheet-col">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Foot Strikes</h5></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><h5>Power Attack</h5></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_kick" /></td>
+                                    <td><h5>Kick</h5></td>
+                                    <td><input type="text" value="1d8" name="attr_kick" title="@{kick}" style="width:80px" placeholder="1d8" /></td>
+                                    <td><button type="roll" name="attr_kick_roll" title="@{kick_roll}" value="&{template:default} {{name=@{character_name} strikes with a Kick}} {{Damage=[[@{kick}+@{hth_damage}]]}}"></button></td>
+                                    <td><button type="roll" name="attr_powerkick_roll" title="@{powerkick_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Kick}} {{Damage=[[(@{kick}+@{hth_damage})*2]]}}"></button></td>
+                                </tr>
+                                <tr>    
+                                    <td><input type="checkbox" name="attr_checkbox_knee" /></td>
+                                    <td><h5>Knee</h5></td>
+                                    <td><input type="text" value="1d6" name="attr_knee" title="@{knee}" style="width:80px" placeholder="1d6" /></td>
+                                    <td><button type="roll" name="attr_knee_roll" title="@{knee_roll}" value="&{template:default} {{name=@{character_name} strikes with a Knee}} {{Damage=[[@{knee}+@{hth_damage}]]}}"></button></td>
+                                    <td><button type="roll" name="attr_powerknee_roll" title="@{powerknee_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Knee}} {{Damage=[[(@{knee}+@{hth_damage})*2]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="attr_checkbox_leapkick" /></td>
+                                    <td><h5>Leap Kick</h5></td>
+                                    <td><input type="text" value="3d8" name="attr_leapkick" title="@{leapkick}" style="width:80px" placeholder="1d6" /></td>
+                                    <td><button type="roll" name="attr_leapkick_roll" title="@{leapkick_roll}" value="&{template:default} {{name=@{character_name} strikes with a Leap Kick}} {{Damage=[[@{leapkick}+@{hth_damage}]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="attr_checkbox_backsweep" /></td>
+                                    <td><h5>Backward Sweep</h5></td>
+                                    <td></td>
+                                    <td><button type="roll" name="attr_backsweep_roll" title="@{backsweep_roll}" value="&{template:default} {{name=@{character_name} attacks with a Backward Sweep}} {{Damage=None; knocks down opponent if strike is succesful (loses one melee action and initiative)}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="attr_checkbox_trip" /></td>
+                                    <td><h5>Trip/Leg Hook</h5></td>
+                                    <td></td>
+                                    <td><button type="roll" name="attr_trip_roll" title="@{trip_roll}" value="&{template:default} {{name=@{character_name} attacks with a Trip/Leg Hook}} {{Damage=None; knocks down opponent if strike is succesful (loses one melee action and initiative)}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Holds</h5></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Arm Hold</h5></td>
+                                    <td></td>
+                                    <td><button type="roll" name="attr_armhold_roll" title="@{armhold_roll}" value="&{template:default} {{name=@{character_name} attempts an Arm Hold}} {{Strike=[[1d20+@{pp}+?{Attacker or Defender?|Attacker,@{hth_strike}|Defender,0}]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Leg Hold</h5></td>
+                                    <td></td>
+                                    <td><button type="roll" name="attr_leghold_roll" title="@{leghold_roll}" value="&{template:default} {{name=@{character_name} attempts a Leg Hold}} {{Strike=[[1d20+@{pp}+?{Attacker or Defender?|Attacker,@{hth_strike}|Defender,0}]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Body Hold</h5></td>
+                                    <td></td>
+                                    <td><button type="roll" name="attr_bodyhold_roll" title="@{bodyhold_roll}" value="&{template:default} {{name=@{character_name} attempts a Body Hold}} {{Strike=[[1d20+@{pp}+?{Attacker or Defender?|Attacker,@{hth_strike}|Defender,0}]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h5>Neck Hold</h5></td>
+                                    <td></td>
+                                    <td><button type="roll" name="attr_neckhold_roll" title="@{neckhold_roll}" value="&{template:default} {{name=@{character_name} attempts a Neck Hold}} {{Strike=[[1d20+@{pp}+?{Attacker or Defender?|Attacker,@{hth_strike}|Defender,0}]]}}"></button></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
-                </div>
-                <div class="sheet-tabbed-panel">
-                    <div class="sheet-row-panel">
-                        <input type="checkbox" class="sheet-arrow" name="attr_martialcombat-toggle"  />
-                        <h4>Martial Combat Maneuvers </h4>
-                        <div class="body">
-                            <div class="sheet-2colrow">
-                                <div class="sheet-col">
-                                    <table>
-                                        <h4>Hand Strikes</h4>
-                                        <tr>
-                                            <td><input type="checkbox" name="attr_checkbox_backhand" /></td>
-                                            <td><h5>Backhand</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Backhand}} {{Damage=[[1d6+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_clawhand" /></td>
-                                            <td><h5>Claw Hand</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Claw Hand}} {{Damage=[[1d6+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_dblfist" /></td>
-                                            <td><h5>Double-Fist</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Double-fist}} {{Damage=[[1d4+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_dblknuc" /></td>
-                                            <td><h5>Double-Knuckle</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Double-knuckle}} {{Damage=[[1d8+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_foreknuc" /></td>
-                                            <td><h5>Fore-Knuckle</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Fore-knuckle}} {{Damage=[[1d8+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_knifehand" /></td>
-                                            <td><h5>Knife Hand</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Knife Hand}} {{Damage=[[2d4+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_palm" /></td>
-                                            <td><h5>Palm Strike</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Palm Strike}} {{Damage=[[1d6+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_roundhousepunch" /></td>
-                                            <td><h5>Roundhouse Punch</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Roundhouse Punch}} {{Damage=[[1d8+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_uppercut" /></td>
-                                            <td><h5>Uppercut</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with an Uppercut}} {{Damage=[[1d8+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="sheet-col">
-                                    <table>
-                                        <h4>Foot Strikes</h4>
-                                        <tr>
-                                            <td><input type="checkbox" name="attr_checkbox_axekick" /></td>
-                                            <td><h5>Axe Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with an Axe Kick}} {{Damage=[[1d10+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_bwdsweep" /></td>
-                                            <td><h5>Backward Sweep</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Backward Sweep knockdown}} {{Strike=[[1d20cs>20+@{hth_strike}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_crescentkick" /></td>
-                                            <td><h5>Crescent Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Cresent Kick}} {{Damage=[[d10+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="attr_checkbox_leapkick" /></td>
-                                            <td><h5>Leap Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Leap Kick}} {{Damage=[[3d8+@{hth_damage}]]}}"></button></td>
-                                            <td>(Costs 2 attacks)</td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_roundhousekick" /></td>
-                                            <td><h5>Roundhouse Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Roundhouse Kick}} {{Damage=[[2d6+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_snapkick" /></td>
-                                            <td><h5>Snap Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Snap Kick}} {{Damage=[[d6+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_tripkick" /></td>
-                                            <td><h5>Trip/Leg Hook</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Trip/Leg Hook knockdown}} {{Strike=[[1d20cs>20+@{hth_strike}]]}}"></button></td>
-                                        </tr>
-                                        <tr>    
-                                            <td><input type="checkbox" name="attr_checkbox_wheelkick" /></td>
-                                            <td><h5>Wheel Kick</h5></td>
-                                            <td><button type="roll" value="&{template:default} {{@{character_name} strikes with a Wheel Kick}} {{Damage=[[1d10+@{hth_damage}]]}}"></button></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
